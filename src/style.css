@@ -1,0 +1,136 @@
+:root {
+    --clr-body-bg: hsl(230, 50%, 10%);
+    --clr-rootcontainer-bg: hsl(220, 50%, 20%);
+    --clr-subcontainer-bg: hsl(220, 50%, 30%);
+    --clr-subcontainer-bg-light: hsl(220, 50%, 65%);
+    --clr-outline: hsl(220, 50%, 40%);
+    --clr-text: hsl(0 0% 95%);
+    --clr-subtext: hsl(0 0% 75%);
+    --clr-logo-hover: hsl(220 50% 75%);
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background: var(--clr-body-bg);
+    color: var(--clr-text);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--clr-text);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 0.75rem;
+    color: var(--clr-subtext);
+}
+
+input[type="time"] {
+    color: var(--clr-text);
+    padding: 0.25rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem;
+    background-color: var(--clr-subcontainer-bg-light);
+    border: var(--clr-logo-hover) solid 0.25rem;
+    border-bottom: var(--clr-outline) solid 0.25rem;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator{
+    filter: invert(100%);
+}
+
+@-webkit-keyframes drop-shadow {
+    100%  { -webkit-filter: drop-shadow(0 0 1rem var(--clr-logo-hover)); }
+    0% { -webkit-filter: drop-shadow(0 0 0 var(--clr-logo-hover)); }
+}
+
+.logo {
+    width: 1rem;
+    margin: 0 0.25rem 0 0.25rem;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 1em var(--clr-logo-hover));
+}
+
+.root-container {
+    background-color: var(--clr-rootcontainer-bg);
+    outline: var(--clr-outline) solid 0.25rem;
+    max-width: 720px;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 0.25rem;
+}
+
+.title-container {
+    background-color: var(--clr-subcontainer-bg);
+    outline: var(--clr-outline) solid 0.25rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    margin: 1.5rem;
+}
+
+.body-container {
+    background-color: var(--clr-subcontainer-bg);
+    outline: var(--clr-outline) solid 0.25rem;
+    margin: 1.5rem;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+}
+
+.time-display {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.help-text {
+    text-align: center;
+}
+
+button {
+    padding: 1rem;
+    margin: 0 1rem 0 1rem;
+    background-color: var(--clr-subcontainer-bg-light);
+    border: var(--clr-logo-hover) solid 0.25rem;
+    border-bottom: var(--clr-outline) solid 0.25rem;
+    color: var(--clr-text);
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    filter: brightness(1);
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px var(--clr-logo-hover);
+    filter: brightness(1.2);
+}
+
+ul {
+    list-style: none;
+}
